@@ -1,0 +1,55 @@
+version: 0
+model:
+  encoder_type: egnn
+  encoder:
+    in_node_nf: 128
+    in_edge_nf: 0
+    out_node_nf: 128
+    hidden_nf: 128
+    n_layers: 4
+    device: cuda:0
+  token_type: 158
+  edge_type: 6
+  head:
+    dim_hidden: 256
+    num_classes: 2
+    d_model: 128
+data:
+  root: data/processed/sdf/
+  train: train_80w_aro_1.pt
+  val: val_80w_aro_1.pt
+  test: test_80w_aro_1.pt
+  #eval: [diffsbdd_caj_aro_1.pt]
+  eval: [gasa_test1_aro_1.pt,gasa_test2_aro_1.pt,gasa_test3_aro_1.pt]
+  #eval: [enamine.pt, compas.pt]
+  #eval: [enamine_1w_tgtdiff.pt]
+  #eval: ["3dsbdd.pt", "d3fg.pt", "decompdiff.pt", "diffbp.pt", "diffsbdd.pt", "flag.pt", 
+  #            "graphbp.pt", "ligan.pt", "molcraft.pt", "pocket2mol.pt", "targetdiff.pt", "voxbind.pt",
+  #            "enamine.pt", "compas.pt"]
+  #eval: [test_10w.pt]
+  #eval: ["guide_1_10_sbdd.pt", "guide_1_50_sbdd.pt", "guide_1_100_sbdd.pt", "guide_1_200_sbdd.pt", "guide_1_500_sbdd.pt", "guide_1_1000_sbdd.pt"]
+  #eval: ["guide_1223_sbdd_lin.pt"]
+  #eval: ["dpo_300_sbdd_lin.pt", "dpo_400_sbdd_lin.pt","dpo_500_sbdd_lin.pt","dpo_700_sbdd_lin.pt"]
+  #eval: ["decompdiff_24_8_sbdd_lin.pt"]
+seed: 530
+train:
+  batch_size: 256
+  max_epoch: 50
+  val_freq: 1
+  grad_clip: 1.0
+  lr: 5.e-5
+  min_lr: 1.e-7
+  optimizer:
+    type: adamw
+    beta1: 0.9
+    beta2: 0.999
+    weight_decay: 0.01
+  scheduler:
+    type: plateau
+    factor: 0.6
+    patience: 1
+  save_dir: exps/syn3d_sbdd
+  metric_min_better: False
+  save_topk: 3
+  tag: 
+  num_workers: 8

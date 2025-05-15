@@ -1,0 +1,42 @@
+version: 0
+model:
+  encoder_type: smiles
+  encoder:
+    num_token_types: 160
+    d_model: 256
+    nhead: 8
+    dim_feedforward: 512
+    num_layers: 3
+    pe_max_len: 192
+  head:
+    dim_hidden: 512
+    num_classes: 3
+    d_model: 1024
+data:
+  root: data/sbdd/fps/
+  train: IL17.pt
+  val: IL17.pt
+  test: IL17.pt
+  #eval: [nonpher_test.pt, gasa_test1.pt, gasa_test2.pt, gasa_test3.pt]
+  eval: [chemp.pt, 9fl3.pt, 9fl3_dpo.pt, 8dyg.pt, 8dyg_dpo.pt]
+seed: 1016
+train:
+  batch_size: 256
+  max_epoch: 50
+  val_freq: 1
+  grad_clip: 1.0
+  lr: 3.e-4
+  min_lr: 1.e-5
+  optimizer:
+    type: adamw
+    beta1: 0.9
+    beta2: 0.999
+    weight_decay: 0.01
+  scheduler:
+    type: plateau
+    factor: 0.6
+    patience: 5
+  save_dir: exps/fps/
+  metric_min_better: False
+  save_topk: 3
+  tag: 

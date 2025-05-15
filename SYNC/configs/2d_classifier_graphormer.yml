@@ -1,0 +1,60 @@
+version: 0
+model:
+  encoder_type: graphormer
+  encoder:
+    n_layers: 12
+    num_heads: 8
+    hidden_dim: 80
+    dropout_rate: 0.1
+    intput_dropout_rate: 0.1
+    weight_decay: 0.01
+    ffn_dim: 80
+    dataset_name: None
+    warmup_updates: 40000
+    tot_updates: 400000
+    peak_lr: 2e-4
+    end_lr: 1e-9
+    edge_type: multi_hop
+    multi_hop_max_dist: 20
+    attention_dropout_rate: 0.1
+    flag: False
+    flag_m: 3
+    flag_step_size: 1e-3
+    flag_mag: 1e-3
+  head:
+    dim_hidden: 512
+    num_classes: 2
+    d_model: 80
+data:
+  root: data/processed/raw/
+  train: train_80w.pt
+  val: test_80w.pt
+  test: val_80w.pt
+  #eval: [nonpher_test.pt, gasa_test1.pt, gasa_test2.pt, gasa_test3.pt]
+  #eval: ["3dsbdd.pt", "d3fg.pt", "decompdiff.pt", "diffbp.pt",  "diffsbdd.pt", "flag.pt", 
+  #      "graphbp.pt", "ligan.pt", "molcraft.pt", "pocket2mol.pt","targetdiff.pt", "voxbind.pt",
+  #            "enamine.pt", "compas.pt"]
+  #eval: [test_10w.pt]
+  eval: [ gasa_test1.pt, gasa_test2.pt, gasa_test3.pt, nonpher_test.pt, compas.pt, enamine.pt]
+seed: 530
+train:
+  batch_size: 256
+  max_epoch: 50
+  val_freq: 1
+  grad_clip: 1.0
+  lr: 2.e-3
+  min_lr: 1.e-5
+  optimizer:
+    type: adamw
+    beta1: 0.9
+    beta2: 0.999
+    weight_decay: 0.01
+  scheduler:
+    type: plateau
+    factor: 0.8
+    patience: 1
+  save_dir: exps/syn2d_g
+  metric_min_better: False
+  save_topk: 3
+  tag: 
+  num_workers: 8

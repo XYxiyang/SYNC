@@ -1,0 +1,45 @@
+version: 0
+model:
+  encoder_type: smiles
+  encoder:
+    num_token_types: 160
+    d_model: 256
+    nhead: 8
+    dim_feedforward: 512
+    num_layers: 1
+    pe_max_len: 192
+  head:
+    dim_hidden: 512
+    num_classes: 2
+    d_model: 256
+data:
+  root: data/sbdd/smiles/
+  train: train_170w.pt
+  val: val_170w.pt
+  test: test_170w.pt
+  #eval: ["3dsbdd.pt", "d3fg.pt", "decompdiff.pt", "diffbp.pt", "diffsbdd.pt", "flag.pt", 
+  #            "graphbp.pt", "ligan.pt", "molcraft.pt", "pocket2mol.pt", "targetdiff.pt", "voxbind.pt",
+  #            "enamine.pt", "compas.pt"]
+  #eval: [nonpher_test.pt, gasa_test1.pt, gasa_test2.pt, gasa_test3.pt]
+  eval: [guide_0.pt]
+seed: 530
+train:
+  batch_size: 256
+  max_epoch: 10
+  val_freq: 1
+  grad_clip: 1.0
+  lr: 3.e-4
+  min_lr: 1.e-5
+  optimizer:
+    type: adamw
+    beta1: 0.9
+    beta2: 0.999
+    weight_decay: 0.01
+  scheduler:
+    type: plateau
+    factor: 0.6
+    patience: 5
+  save_dir: exps/syn1d
+  metric_min_better: False
+  save_topk: 3
+  tag: 
