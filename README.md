@@ -6,8 +6,8 @@
 
 ## File Structure
 * decompdiff
-** Modified from `https://github.com/bytedance/DecompDiff.git`
+* * Modified from `https://github.com/bytedance/DecompDiff.git`
 * SYNC
-** Our implementation of SYNC, containing 1D, 2D, 3D versions
+* * Our implementation of SYNC, containing 1D, 2D, 3D versions
 * targetdiff
-** Modified from `https://github.com/guanjq/targetdiff.git`, we provide a checkpoint of SYNC-3D in ./pretrained-models. You can try `TargetDiff-Guide` following the instructions in `targetdiff/README.md`.
+* * Modified from `https://github.com/guanjq/targetdiff.git`, we provide a checkpoint of SYNC-3D in ./pretrained-models. You can try `TargetDiff-Guide` following the instructions in `targetdiff/README.md`.
