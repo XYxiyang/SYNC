@@ -1,4 +1,4 @@
-# Official Implementation of SYNC: Measuring and Advancing Synthesizability in Structure-Based Drug Design
+# Official Implementation of SYNC: Measuring and Advancing Synthesizability in Structure-Based Drug Design (Under Review)
 
 ## Sampling Molecules as An Example
 * Please build environment follow `README.md` in targetdiff and download requested data and checkpoints
