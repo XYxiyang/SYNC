@@ -1,4 +1,4 @@
-# Official Implementation of SYNC: Measuring and Advancing Synthesizability in Structure-Based Drug Design (Under Review)
+# Official Implementation of SYNC: Measuring and Advancing Synthesizability in Structure-Based Drug Design (ICLR'26)
 
 ## Installation
 
@@ -40,3 +40,4 @@ python -m pip install git+https://github.com/Valdes-Tresanco-MS/AutoDockTools_py
 * * Our implementation of SYNC, containing 1D, 2D, 3D versions
 * targetdiff
 * * Modified from `https://github.com/guanjq/targetdiff.git`, we provide a checkpoint of SYNC-3D in ./pretrained-models. You can try `TargetDiff-Guide` following the instructions in `targetdiff/README.md`.
+ 
