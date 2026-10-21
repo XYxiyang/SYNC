@@ -1,0 +1,91 @@
+{
+  "validation_date": "2026-10-20",
+  "pytest": {
+    "passed": 14,
+    "failed": 0,
+    "last_runtime_seconds": 44.683
+  },
+  "python_files_parsed": 281,
+  "copied_source_records_verified": 315,
+  "copied_files_modified_in_release": [
+    "legacy/targetdiff/configs/dpo.yml",
+    "legacy/targetdiff/configs/sampling.yml",
+    "legacy/targetdiff/datasets/pair_dataset.py",
+    "legacy/targetdiff/models/molopt_score_model.py",
+    "legacy/targetdiff/scripts/dpo_diffusion.py",
+    "legacy/targetdiff/scripts/eval_pairwise.py",
+    "legacy/targetdiff/scripts/sample_diffusion.py",
+    "legacy/targetdiff/scripts/sample_pairwise.py",
+    "legacy/decompdiff/configs/dpo.yml",
+    "legacy/decompdiff/configs/dpo_sampling.yml",
+    "legacy/decompdiff/models/decompdiff.py",
+    "legacy/decompdiff/scripts/data_preparation/preprocess_subcomplex.py",
+    "legacy/decompdiff/scripts/dpo_diffusion.py",
+    "legacy/decompdiff/scripts/eval_pairwise.py",
+    "legacy/decompdiff/scripts/sample_diffusion_decomp.py",
+    "legacy/decompdiff/scripts/sample_pairwise.py"
+  ],
+  "new_legacy_files": [
+    "legacy/targetdiff/configs/sampling_dpo.yml"
+  ],
+  "paper_classifier_benchmarks_matched": 5,
+  "targetdiff_guidance_validation": {
+    "seed": 2021,
+    "num_molecules": 2,
+    "diffusion_steps": 1000,
+    "pocket": "BSD_ASPTE_1_130_0/2z3h_A_rec_1wn6_bst_lig_tt_docked_3_pocket10.pdb",
+    "guidance_source": "targetdiff_icml/logs_diffusion/dpo_2025_01_25__16_15_06/models/molopt_score_model.py",
+    "source_sha256": "a66a6bd7bc3a72a1d15a4da1eb2bc40fc494e92ac381d6ed6de2e8917dc42f19",
+    "device": "NVIDIA L40",
+    "torch": "2.6.0+cu124",
+    "source_comparison": [
+      {
+        "t": 399,
+        "probability_max_abs_error_vs_archive": 4.656612873077393e-10,
+        "coordinate_max_abs_error_vs_archive": 1.1920928955078125e-07,
+        "probability_change_enabled": 0.9999243021011353,
+        "probability_change_disabled": 0.0,
+        "argmax_types_different_enabled_vs_disabled": 9
+      },
+      {
+        "t": 100,
+        "probability_max_abs_error_vs_archive": 1.5631940186722204e-13,
+        "coordinate_max_abs_error_vs_archive": 0.0,
+        "probability_change_enabled": 0.00308835506439209,
+        "probability_change_disabled": 0.0,
+        "argmax_types_different_enabled_vs_disabled": 0
+      },
+      {
+        "t": 2,
+        "probability_max_abs_error_vs_archive": 6.821210263296962e-13,
+        "coordinate_max_abs_error_vs_archive": 7.152557373046875e-07,
+        "probability_change_enabled": 6.4373016357421875e-06,
+        "probability_change_disabled": 0.0,
+        "argmax_types_different_enabled_vs_disabled": 0
+      },
+      {
+        "t": 0,
+        "probability_max_abs_error_vs_archive": 2.9103830456733704e-11,
+        "coordinate_max_abs_error_vs_archive": 4.76837158203125e-07,
+        "probability_change_enabled": 4.470348358154297e-06,
+        "probability_change_disabled": 0.0,
+        "argmax_types_different_enabled_vs_disabled": 0
+      }
+    ],
+    "successful_connected_molecules": 2,
+    "reference_csv_matches": [
+      {
+        "sample_index": 0,
+        "smiles": "O=C1C=CC2=C(C1)NC(C1=CC(=O)N=CC1O)C2NCC(=O)C(=O)O",
+        "sa": 0.55,
+        "matches_final_metric_csv": true
+      },
+      {
+        "sample_index": 1,
+        "smiles": "CN1CC(O)C(=O)C(C(CC2CNC(=N)O2)OC(=O)N2CC=C(O)C(=O)NC2=O)C1=O",
+        "sa": 0.53,
+        "matches_final_metric_csv": true
+      }
+    ]
+  }
+}

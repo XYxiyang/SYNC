@@ -1,0 +1,22 @@
+{
+  "seed": 2021,
+  "guide": "guide",
+  "diffusion_steps": 1000,
+  "elapsed_seconds": 125.20481252670288,
+  "records": [
+    {
+      "sample_index": 0,
+      "atoms": 25,
+      "status": "ok",
+      "smiles": "O=C1C=C(c2nc(CCC(O)C(=O)O)c3cc(Cl)sc3n2)C(=O)N=N1",
+      "connected": true
+    },
+    {
+      "sample_index": 1,
+      "atoms": 31,
+      "status": "ok",
+      "smiles": "CN1CC(=O)C(O)C(C(CCCNC(N)=O)C2=CCC(O)C(=N)NC(=O)N2C=O)C1=O",
+      "connected": true
+    }
+  ]
+}

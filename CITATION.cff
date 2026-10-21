@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the SYNC paper."
+title: "SYNC: Measuring and Advancing Synthesizability in Structure-Based Drug Design"
+type: software
+version: 0.1.0
+repository-code: "https://github.com/XYxiyang/SYNC"
+url: "https://openreview.net/forum?id=y1tPw4Uuzg"
+authors:
+  - family-names: Liu
+    given-names: Yunfan
+  - family-names: Wu
+    given-names: Lirong
+  - family-names: Gao
+    given-names: Zhifeng
+  - family-names: Huang
+    given-names: Yufei
+  - family-names: Tan
+    given-names: Cheng
+  - family-names: Lin
+    given-names: Haitao
+  - family-names: Liu
+    given-names: Zicheng
+  - family-names: Chi
+    given-names: Changxi
+  - family-names: Yu
+    given-names: Chang
+  - family-names: Li
+    given-names: Stan Z.

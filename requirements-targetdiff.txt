@@ -1,0 +1,10 @@
+# Python 3.10; install PyTorch and matching PyG extensions as in docs/GENERATION.md.
+numpy==1.26.4
+rdkit==2022.9.5
+torch-geometric==2.6.1
+scikit-learn==1.5.2
+easydict==1.13
+PyYAML>=6
+lmdb>=1.4
+openbabel-wheel==3.1.1.23
+scipy==1.15.3

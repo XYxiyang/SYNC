@@ -1,0 +1,33 @@
+# Original research environment; separate from the standalone scorer.
+name: sync-legacy
+channels:
+  - pytorch
+  - nvidia
+  - pyg
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pytorch=1.13.1
+  - pytorch-cuda=11.6
+  - pyg=2.2.0
+  - pytorch-scatter
+  - pytorch-sparse
+  - pytorch-cluster
+  - rdkit=2022.03.2
+  - openbabel
+  - numpy<2
+  - scipy
+  - scikit-learn
+  - pandas
+  - pyyaml
+  - easydict
+  - python-lmdb
+  - tensorboard
+  - tqdm
+  - matplotlib
+  - biopython
+  - pip
+  - pip:
+      - einops
+      - ogb
+      - Cython<3

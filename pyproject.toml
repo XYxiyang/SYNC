@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sync-sbdd"
+version = "0.1.0"
+description = "SYNC synthesizability classifier and ICLR 2026 research code"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1", "numpy>=1.23", "rdkit>=2022.3", "tqdm>=4.64"]
+
+[project.optional-dependencies]
+validation = ["pytest>=7", "PyYAML>=6"]
+
+[project.scripts]
+sync-score = "sync_sbdd.cli:main"
+
+[tool.setuptools]
+packages = ["sync_sbdd"]
+
+[tool.setuptools.package-data]
+sync_sbdd = ["smiles_vocab_with_aro.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

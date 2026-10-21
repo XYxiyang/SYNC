@@ -1,0 +1,10 @@
+{
+  "source": "targetdiff_icml/logs_diffusion/dpo_2025_01_25__16_15_06/models/molopt_score_model.py",
+  "source_sha256": "a66a6bd7bc3a72a1d15a4da1eb2bc40fc494e92ac381d6ed6de2e8917dc42f19",
+  "source_function": "guidance",
+  "source_line": 1123,
+  "release": "legacy/targetdiff/models/molopt_score_model.py",
+  "categorical_update_enabled": true,
+  "selected_run_checkpoint": "targetdiff_icml/logs_diffusion/dpo_2025_01_25__16_15_06/checkpoints/1800.pt",
+  "guidance_classifier": "classifier_noedge.ckpt"
+}

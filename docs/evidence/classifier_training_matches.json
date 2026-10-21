@@ -1,0 +1,7 @@
+{
+  "source": "SYNSBDD/exps/classifier_noedge.ckpt",
+  "sha256": "11d86643406d98f07b1b3b3dd168f6e7d63c52ab5cc096b3283d7f7d46748b0e",
+  "exact_checkpoint_files": [
+    "SYNSBDD/exps/syn3d_sbdd/80w_1e-5_aro_tgtdiff_noedge_2025_01_21__07_04_34/checkpoint/epoch22_step54878.ckpt"
+  ]
+}

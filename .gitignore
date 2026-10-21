@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+outputs/
+logs/
+.venv/
+legacy/*/data/
+legacy/**/outputs*/
+legacy/**/logs*/
+!legacy/classifier/data/
+!legacy/classifier/data/preprocessing/
+!legacy/classifier/data/preprocessing/*.py

@@ -1,0 +1,56 @@
+{
+  "checkpoint_source_sha256": "11d86643406d98f07b1b3b3dd168f6e7d63c52ab5cc096b3283d7f7d46748b0e",
+  "results": [
+    {
+      "dataset": "nonpher_test",
+      "source": "SYNSBDD/data/processed/sdf/nonpher_test_aro_1.pt",
+      "records": 160,
+      "correct": 149,
+      "accuracy": 0.93125,
+      "paper_accuracy": 0.9313,
+      "matches_paper_4dp": true
+    },
+    {
+      "dataset": "gasa_test1",
+      "source": "SYNSBDD/data/processed/sdf/gasa_test1_aro_1.pt",
+      "records": 5853,
+      "correct": 5801,
+      "accuracy": 0.9911156671792243,
+      "paper_accuracy": 0.9911,
+      "matches_paper_4dp": true
+    },
+    {
+      "dataset": "gasa_test2",
+      "source": "SYNSBDD/data/processed/sdf/gasa_test2_aro_1.pt",
+      "records": 30286,
+      "correct": 25459,
+      "accuracy": 0.8406194281186027,
+      "paper_accuracy": 0.8406,
+      "matches_paper_4dp": true
+    },
+    {
+      "dataset": "gasa_test3",
+      "source": "SYNSBDD/data/processed/sdf/gasa_test3_aro_1.pt",
+      "records": 1761,
+      "correct": 1332,
+      "accuracy": 0.7563884156729132,
+      "paper_accuracy": 0.7564,
+      "matches_paper_4dp": true
+    },
+    {
+      "dataset": "enamine",
+      "source": "SYNSBDD/data/processed/sdf/enamine_aro_1.pt",
+      "records": 211197,
+      "correct": 201051,
+      "accuracy": 0.9519595448798989,
+      "paper_accuracy": 0.952,
+      "matches_paper_4dp": true,
+      "historical_zero_padding_indices": [
+        81431,
+        147922,
+        169140,
+        181548
+      ]
+    }
+  ]
+}
